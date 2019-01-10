@@ -15,7 +15,7 @@ $router->get('/profile',['middleware'=>'auth', function () {
     return view('homepage');
 }]);
 
-$router->get('/login', function () use ($router) {
+$router->get('/', function () use ($router) {
     return view('login');
 });
 $router->post('/login','UserController@login');
